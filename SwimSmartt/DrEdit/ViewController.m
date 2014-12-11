@@ -15,9 +15,9 @@
 #import "DrEditUtilities.h"
 
 // Constants used for OAuth 2.0 authorization.
-static NSString *const kKeychainItemName = @"iOSDriveSample: Google Drive";
-static NSString *const kClientId = @"998240342814-fek0bjnartl69839cf8nu3063im46vta.apps.googleusercontent.com";
-static NSString *const kClientSecret = @"nbA0RXGzyT3uA6Cf0h9mulcg";
+static NSString *const kKeychainItemName = @"";
+static NSString *const kClientId = @"";
+static NSString *const kClientSecret = @"";
 
 
 @interface ViewController ()
