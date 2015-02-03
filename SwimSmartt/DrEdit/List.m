@@ -36,7 +36,6 @@
     return service;
 }
 
-
 -(void)viewDidLoad{
     self.tableView.allowsMultipleSelection = YES;
     [self.navigationBar setTitle:[_data objectAtIndex:0]];
@@ -78,6 +77,7 @@
     
     [mc setMessageBody:[messageTemp stringByAppendingString:@"\n\n Additional comments:\n"] isHTML:NO];
     [mc setSubject:emailTitle];
+    
     if([MFMailComposeViewController canSendMail]){
         [self presentViewController:mc animated:YES completion:NULL];
     }
@@ -117,7 +117,6 @@
         NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
         
         [dateformate setDateFormat:@"dd/MM/YYYY"];
-        
         NSString *date_String=[dateformate stringFromDate:[NSDate date]];
         
         string= [NSString stringWithFormat:@"%@,%@,%@,%@\n%@",self.swimmersName,self.navigationBar.title,date_String, self.messageBody, self.tempContent];
@@ -192,5 +191,23 @@
     cell.textLabel.text = [_data objectAtIndex:indexPath.row];
     return cell;
 }
+///
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
+///
 
 @end

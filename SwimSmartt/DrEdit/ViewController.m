@@ -164,12 +164,11 @@ static NSString *const kClientSecret = @"";
         // Sign out
         [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:kKeychainItemName];
         [[self driveService] setAuthorizer:nil];
+        
         //self.authButton.title = @"Sign in";
-         [self.authButton setTitle:@"Sign in" forState:UIControlStateNormal];
+        [self.authButton setTitle:@"Sign in" forState:UIControlStateNormal];
         self.isAuthorized = NO;
-        //[self toggleActionButtons:NO];
         self.driveFile =nil;
-        //[self.tableView reloadData];
     }
     [self buttonState];
 }
@@ -178,12 +177,7 @@ static NSString *const kClientSecret = @"";
     [[self driveService] setAuthorizer:auth];
     _authentication=auth;
     [self.authButton setTitle:@"Sign out" forState:[self.authButton state]];
-    //self.authButton.titleLabel = @"Sign out";
     self.isAuthorized = YES;
-    //[self toggleActionButtons:YES];
-    //at a later date I should change the state of
-    // the stroke selection button
-    // before and after signin
     [self loadDriveFiles];
     [self buttonState];
 }
