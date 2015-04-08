@@ -1,7 +1,6 @@
 //
 //  List.m
 //  SR
-//
 //  Created by Jacob Kirlan-Stout on 11/28/14.
 //  Copyright (c) 2014 Jacob Kirlan-Stout. All rights reserved.
 //
