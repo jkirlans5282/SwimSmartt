@@ -15,6 +15,7 @@
 #import "DrEditUtilities.h"
 
 // Constants used for OAuth 2.0 authorization.
+///////////////////////////////////////////////
 static NSString *const kKeychainItemName = @"";
 static NSString *const kClientId = @"";
 static NSString *const kClientSecret = @"";
